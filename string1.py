@@ -59,10 +59,8 @@ def both_ends(s):
 
 
 def fix_start(s):
-    # your code here
-    return
-
-
+    m = len(s)
+    return s[0] + s[1:m].replace(s[0], "*") 
 # D. mix_up
 # Given strings a and b, return a single string with a and
 # b separated by a space '<a> <b>', except swap the first
@@ -74,8 +72,9 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    # your code here
-    return
+    b1 = len(a)
+    b2 = len(b)
+    return b[0:2] + a[2:b1] + ' ' + a[0:2] + b[2:b2]
 
 
 # Provided simple test() function used in main() to print
