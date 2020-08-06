@@ -4,7 +4,7 @@ Kenzie assignment: String2
 """
 # Your name, plus anyone who helped you with this assignment.
 # Give credit where credit is due.
-__author__ = "???"
+__author__ = "Isaiah 'Takio' Gay"
 
 # Copyright 2010 Google Inc.
 # Licensed under the Apache License, Version 2.0
@@ -23,8 +23,13 @@ __author__ = "???"
 
 
 def verbing(s):
-    # your code here
-    return
+    length = len(s)
+    if length>2:
+        if s[-3:] =='ing':
+            s+= 'ly'
+        else:
+            s+= 'ing'
+    return s
 
 
 # E. not_bad
@@ -37,8 +42,13 @@ def verbing(s):
 
 
 def not_bad(s):
-    # your code here
-    return
+    snb = s.find('not')
+    sgood = s.find('bad')
+    if sgood > snb:
+        s= s.replace(s[snb:(sgood+3)], 'good')
+        return s
+    else:
+        return s
 
 
 # F. front_back
@@ -52,8 +62,22 @@ def not_bad(s):
 
 
 def front_back(a, b):
-    # your code here
-    return
+    length1 = len(a)
+    length2 = len(b)
+    if length1 % 2 == 0:
+        index1 = length1 // 2
+    else:
+        index1 = (length1 // 2) +1
+
+    if length2 % 2 == 0:
+        index2 = length2 // 2
+    else:
+        index2 = (length2 // 2) +1
+    front1 = a[0:index1]
+    back1 = a[index1:]
+    front2 = b[0:index2]
+    back2 = b[index2:] 
+    return front1 + front2 + back1 + back2
 
 
 # Provided simple test() function used in main() to print
