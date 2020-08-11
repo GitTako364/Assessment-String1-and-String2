@@ -32,7 +32,7 @@ def verbing(s):
     return s
 
 
-# E. not_bad
+# E. not_bad .
 # Given a string, find the first occurrence of the substrings
 # 'not' and 'bad'. If the 'bad' follows the 'not', replace
 # the whole 'not'...'bad' substring with 'good'.
